@@ -1,7 +1,8 @@
-var x = 7;
 
-function getName(params) {
-    console.log("namaste Javascript");
+function attchEventLister(){
+    let count = 0;
+    document.getElementById("clickMe").addEventListener("click",function () {
+        console.log("Button Cliked",count++)
+    })
 }
-getName();
-console.log(x)
+attchEventLister();

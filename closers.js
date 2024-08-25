@@ -1,15 +1,28 @@
 function x(){
-    let a = 7;
-    function y() {
-        console.log(a)
-    }
-    y();
+    var i = 1;
+   setTimeout(function () {
+    console.log(i)
+   },1000);
 }
-x();
 
-if(true){
-    let a = 10;
-    let b =20;
-    var c = 100;
+function y(){
+    for (var i = 1; i <=5; i++) {
+        console.log("i",i)
+    }
 }
-console.log(c)
+y();
+
+
+
+function z(){
+    for (var i = 1; i <=5; i++) {
+        function close(n) {
+            console.log("N",n)
+            setTimeout(() => {
+                console.log(i)
+            }, n * 1000);
+        } 
+        close(i)
+    }
+}
+// z();
